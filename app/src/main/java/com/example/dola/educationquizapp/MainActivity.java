@@ -12,12 +12,13 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    public int totalQuiz = 13;
-    public int currentQiuz = 0;
+    private int totalQuiz = 13;
+    private int currentQiuz = 0;
 
-    TextView CurrentQuizTextView, TotalQuizTextView ;
-    EditText nameEdiText, surnameEditText;
-    String name, surname;
+    private TextView CurrentQuizTextView, TotalQuizTextView ;
+    private EditText nameEdiText, surnameEditText;
+    private String name, surname;
+    private String[] responses = new String[13];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,10 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout statusContainer = findViewById(R.id.status_container);
 
-        LinearLayout userContainer = findViewById(R.id.user_container);
-
         statusContainer.setVisibility(View.GONE);
-        userContainer.setVisibility(View.GONE);
         hideAllQuizContainer();
     }
 
@@ -46,9 +44,8 @@ public class MainActivity extends AppCompatActivity {
      * Update the counter of the actual quiz
      */
     void updateCurrentQuizStatus(){
-        currentQiuz++;
         TotalQuizTextView.setText("" + totalQuiz);
-        CurrentQuizTextView.setText("" + currentQiuz);
+        CurrentQuizTextView.setText("" + ++currentQiuz);
     }
 
 
@@ -71,180 +68,89 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout startbtn_container = findViewById(R.id.quizapp_start_screen);
         startbtn_container.setVisibility(View.GONE);
 
-        displayQuiz1(view);
+        displayNextQuiz();
         LinearLayout statusContainer = findViewById(R.id.status_container);
         statusContainer.setVisibility(View.VISIBLE);
 
-        LinearLayout userContainer = findViewById(R.id.user_container);
-        userContainer.setVisibility(View.GONE);
-
-
         LinearLayout finalContainer = findViewById(R.id.final_container);
         finalContainer.setVisibility(View.GONE);
+    }
 
-        //TextView username = findViewById(R.id.username);
-        //username.setText(name + " " + surname);
+    /**
+     *  This method display the next quiz
+     */
+    void displayNextQuiz(){
+        LinearLayout quizContainer;
 
+        hideAllQuizContainer();
+        switch (currentQiuz){
+            case 0:
+                quizContainer = findViewById(R.id.question_1);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 1:
+                quizContainer = findViewById(R.id.question_2);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 2:
+                quizContainer = findViewById(R.id.question_3);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 3:
+                quizContainer = findViewById(R.id.question_4);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 4:
+                quizContainer = findViewById(R.id.question_5);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+            case 5:
+                quizContainer = findViewById(R.id.question_6);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 6:
+                quizContainer = findViewById(R.id.question_7);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+            case 7:
+                quizContainer = findViewById(R.id.question_8);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 8:
+                quizContainer = findViewById(R.id.question_9);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+            case 9:
+                quizContainer = findViewById(R.id.question_10);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 10:
+                quizContainer = findViewById(R.id.question_11);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+            case 11:
+                quizContainer = findViewById(R.id.question_12);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+
+            case 12:
+                quizContainer = findViewById(R.id.question_13);
+                quizContainer.setVisibility(View.VISIBLE);
+                break;
+            default:
+                break;
+        }
         updateCurrentQuizStatus();
     }
 
 
-    /**
-     * Display the  quiz 1
-     * @param view
-     */
-    public void displayQuiz1(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_1);
-        quiz1Container.setVisibility(View.VISIBLE);
-    }
-
-
-    /**
-     * Display the  quiz 2
-     * @param view
-     */
-    public void displayQuiz2(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_2);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 3
-     * @param view
-     */
-    public void displayQuiz3(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_3);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 4
-     * @param view
-     */
-    public void displayQuiz4(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_4);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-
-    /**
-     * Display the  quiz 5
-     * @param view
-     */
-    public void displayQuiz5(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_5);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 6
-     * @param view
-     */
-    public void displayQuiz6(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_6);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 7
-     * @param view
-     */
-    public void displayQuiz7(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_7);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 8
-     * @param view
-     */
-    public void displayQuiz8(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_8);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 9
-     * @param view
-     */
-    public void displayQuiz9(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_9);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 10
-     * @param view
-     */
-    public void displayQuiz10(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_10);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 11
-     * @param view
-     */
-    public void displayQuiz11(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_11);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the  quiz 12
-     * @param view
-     */
-    public void displayQuiz12(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_12);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
-
-    /**
-     * Display the thirdthen quiz
-     * @param view
-     */
-    public void displayQuiz13(View view)
-    {
-        hideAllQuizContainer();
-        LinearLayout quiz1Container = findViewById(R.id.question_13);
-        quiz1Container.setVisibility(View.VISIBLE);
-        updateCurrentQuizStatus();
-    }
 
     /**
      * Hide all unecessary elements
@@ -289,10 +195,6 @@ public class MainActivity extends AppCompatActivity {
     {
         LinearLayout statusContainer = findViewById(R.id.status_container);
         statusContainer.setVisibility(View.GONE);
-
-        LinearLayout userContainer = findViewById(R.id.user_container);
-        userContainer.setVisibility(View.GONE);
-
     }
 
     /**
@@ -312,283 +214,269 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /*
-     Catch each quiz anwser
+     Catch each quiz answer
      */
 
-    public void quest1AnswerA(View view)
+    public void quest1Answer(View view)
     {
-        displayQuiz2(view);
+        if (view.getId() == R.id.quest1_answer_a_container){
+            responses[0] = getResources().getString(R.string.quest_1_a);
+
+        } else if (view.getId() == R.id.quest1_answer_b_container){
+            responses[0] = getResources().getString(R.string.quest_1_b);
+
+        }else if (view.getId() == R.id.quest1_answer_c_container){
+            responses[0] = getResources().getString(R.string.quest_1_c);
+
+        }else if (view.getId() == R.id.quest1_answer_d_container){
+            responses[0] = getResources().getString(R.string.quest_1_d);
+        }
+        displayNextQuiz();
+
     }
 
-    public void quest1AnswerB(View view)
+    public void quest2Answer(View view)
     {
-        displayQuiz2(view);
+        if (view.getId() == R.id.quest2_answer_a_container){
+            responses[1] = getResources().getString(R.string.quest_2_a);
+
+        } else if (view.getId() == R.id.quest2_answer_b_container){
+            responses[1] = getResources().getString(R.string.quest_2_b);
+
+        }else if (view.getId() == R.id.quest2_answer_c_container){
+            responses[1] = getResources().getString(R.string.quest_2_c);
+
+        }else if (view.getId() == R.id.quest2_answer_d_container){
+            responses[1] = getResources().getString(R.string.quest_2_d);
+
+        }
+        displayNextQuiz();
+
     }
 
-    public void quest1AnswerC(View view)
+    public void quest3Answer(View view)
     {
-        displayQuiz2(view);
-    }
+        if (view.getId() == R.id.quest3_answer_a_container){
+            responses[2] = getResources().getString(R.string.quest_3_a);
 
-    public void quest1AnswerD(View view)
-    {
-        displayQuiz3(view);
-    }
+        } else if (view.getId() == R.id.quest3_answer_b_container){
+            responses[2] = getResources().getString(R.string.quest_3_b);
 
-    public void quest2AnswerA(View view)
-    {
-        displayQuiz3(view);
-    }
+        }else if (view.getId() == R.id.quest3_answer_c_container){
+            responses[2] = getResources().getString(R.string.quest_3_c);
 
-    public void quest2AnswerB(View view)
-    {
-        displayQuiz3(view);
-    }
-
-    public void quest2AnswerC(View view)
-    {
-        displayQuiz3(view);
-    }
-
-    public void quest2AnswerD(View view)
-    {
-        displayQuiz3(view);
-    }
-
-    public void quest3AnswerA(View view)
-    {
-        displayQuiz4(view);
-    }
-
-    public void quest3AnswerB(View view)
-    {
-        displayQuiz4(view);
-    }
-
-    public void quest3AnswerC(View view)
-    {
-        displayQuiz4(view);
-    }
-
-    public void quest3AnswerD(View view)
-    {
-        displayQuiz4(view);
+        }else if (view.getId() == R.id.quest3_answer_d_container){
+            responses[2] = getResources().getString(R.string.quest_3_d);
+        }
+        displayNextQuiz();
     }
 
 
-    public void quest4AnswerA(View view)
+    public void quest4Answer(View view)
     {
-        displayQuiz5(view);
-    }
+        if (view.getId() == R.id.quest4_answer_a_container){
+            responses[3] = getResources().getString(R.string.quest_4_a);
 
-    public void quest4AnswerB(View view)
-    {
-        displayQuiz5(view);
-    }
+        } else if (view.getId() == R.id.quest4_answer_b_container){
+            responses[3] = getResources().getString(R.string.quest_4_b);
 
-    public void quest4AnswerC(View view)
-    {
-        displayQuiz5(view);
-    }
+        }else if (view.getId() == R.id.quest4_answer_c_container){
+            responses[3] = getResources().getString(R.string.quest_4_c);
 
-    public void quest4AnswerD(View view)
-    {
-        displayQuiz5(view);
-    }
+        }else if (view.getId() == R.id.quest4_answer_d_container){
+            responses[3] = getResources().getString(R.string.quest_4_d);
+        }
+        displayNextQuiz();
 
-    public void quest5AnswerA(View view)
-    {
-        displayQuiz6(view);
-    }
-
-    public void quest5AnswerB(View view)
-    {
-        displayQuiz6(view);
-    }
-
-    public void quest5AnswerC(View view)
-    {
-        displayQuiz6(view);
-    }
-
-    public void quest5AnswerD(View view)
-    {
-        displayQuiz6(view);
-    }
-
-    public void quest5AnswerE(View view)
-    {
-        displayQuiz6(view);
-    }
-
-    public void quest6AnswerA(View view)
-    {
-        displayQuiz7(view);
-    }
-
-    public void quest6AnswerB(View view)
-    {
-        displayQuiz7(view);
-    }
-
-    public void quest6AnswerC(View view)
-    {
-        displayQuiz7(view);
-    }
-
-    public void quest6AnswerD(View view)
-    {
-        displayQuiz7(view);
     }
 
 
-    public void quest7AnswerA(View view)
+    public void quest5Answer(View view)
     {
-        displayQuiz8(view);
-    }
+        if (view.getId() == R.id.quest5_answer_a_container){
+            responses[4] = getResources().getString(R.string.quest_5_a);
+        } else if (view.getId() == R.id.quest5_answer_b_container){
+            responses[4] = getResources().getString(R.string.quest_5_b);
 
-    public void quest7AnswerB(View view)
-    {
-        displayQuiz8(view);
-    }
+        }else if (view.getId() == R.id.quest5_answer_c_container){
+            responses[4] = getResources().getString(R.string.quest_5_c);
 
+        }else if (view.getId() == R.id.quest5_answer_d_container){
+            responses[4] = getResources().getString(R.string.quest_5_d);
 
-    public void quest7AnswerC(View view)
-    {
-        displayQuiz8(view);
-    }
+        }else if (view.getId() == R.id.quest5_answer_e_container){
+            responses[4] = getResources().getString(R.string.quest_5_e);
 
-    public void quest7AnswerD(View view)
-    {
-        displayQuiz8(view);
-    }
+        }
+        displayNextQuiz();
 
-    public void quest8AnswerA(View view)
-    {
-        displayQuiz9(view);
-    }
-
-    public void quest8AnswerB(View view)
-    {
-        displayQuiz9(view);
-    }
-
-    public void quest8AnswerC(View view)
-    {
-        displayQuiz9(view);
-    }
-
-    public void quest8AnswerD(View view)
-    {
-        displayQuiz9(view);
     }
 
 
-    public void quest9AnswerA(View view)
+    public void quest6Answer(View view)
     {
-        displayQuiz10(view);
-    }
+        if (view.getId() == R.id.quest6_answer_a_container){
+            responses[5] = getResources().getString(R.string.quest_6_a);
 
-    public void quest9AnswerB(View view)
-    {
-        displayQuiz10(view);
-    }
+        } else if (view.getId() == R.id.quest6_answer_b_container){
+            responses[5] = getResources().getString(R.string.quest_6_b);
 
-    public void quest9AnswerC(View view)
-    {
-        displayQuiz10(view);
-    }
+        }else if (view.getId() == R.id.quest6_answer_c_container){
+            responses[5] = getResources().getString(R.string.quest_6_c);
 
-    public void quest9AnswerD(View view)
-    {
-        displayQuiz10(view);
-    }
+        }else if (view.getId() == R.id.quest6_answer_d_container){
+            responses[5] = getResources().getString(R.string.quest_6_d);
 
+        }
+        displayNextQuiz();
 
-    public void quest10AnswerA(View view)
-    {
-        displayQuiz11(view);
-    }
-
-    public void quest10AnswerB(View view)
-    {
-        displayQuiz11(view);
-    }
-
-    public void quest10AnswerC(View view)
-    {
-        displayQuiz11(view);
-    }
-
-    public void quest10AnswerD(View view)
-    {
-        displayQuiz11(view);
-    }
-
-    public void quest11AnswerA(View view)
-    {
-        displayQuiz12(view);
-    }
-
-    public void quest11AnswerB(View view)
-    {
-        displayQuiz12(view);
     }
 
 
-    public void quest11AnswerC(View view)
+    public void quest7Answer(View view)
     {
-        displayQuiz12(view);
+        if (view.getId() == R.id.quest7_answer_a_container){
+            responses[6] = getResources().getString(R.string.quest_7_a);
+
+        } else if (view.getId() == R.id.quest7_answer_b_container){
+            responses[6] = getResources().getString(R.string.quest_7_b);
+
+        }else if (view.getId() == R.id.quest7_answer_c_container){
+            responses[6] = getResources().getString(R.string.quest_7_c);
+
+        }else if (view.getId() == R.id.quest7_answer_d_container){
+            responses[6] = getResources().getString(R.string.quest_7_d);
+
+        }
+
+        displayNextQuiz();
+
     }
 
-    public void quest11AnswerD(View view)
+
+    public void quest8Answer(View view)
     {
-        displayQuiz12(view);
+        if (view.getId() == R.id.quest8_answer_a_container){
+            responses[7] = getResources().getString(R.string.quest_8_a);
+
+        } else if (view.getId() == R.id.quest8_answer_b_container){
+            responses[7] = getResources().getString(R.string.quest_8_b);
+
+        }else if (view.getId() == R.id.quest8_answer_c_container){
+            responses[7] = getResources().getString(R.string.quest_8_c);
+
+        }else if (view.getId() == R.id.quest8_answer_d_container){
+            responses[7] = getResources().getString(R.string.quest_8_d);
+
+        }
+        displayNextQuiz();
+
     }
 
-    public void quest12AnswerA(View view)
+
+    public void quest9Answer(View view)
     {
-        displayQuiz13(view);
+        if (view.getId() == R.id.quest9_answer_a_container){
+            responses[8] = getResources().getString(R.string.quest_9_a);
+
+        } else if (view.getId() == R.id.quest9_answer_b_container){
+            responses[8] = getResources().getString(R.string.quest_9_b);
+
+        }else if (view.getId() == R.id.quest9_answer_c_container){
+            responses[8] = getResources().getString(R.string.quest_9_c);
+
+        }else if (view.getId() == R.id.quest9_answer_d_container){
+            responses[8] = getResources().getString(R.string.quest_9_d);
+
+        }
+        displayNextQuiz();
     }
 
-    public void quest12AnswerB(View view)
+
+    public void quest10Answer(View view)
     {
-        displayQuiz13(view);
+        if (view.getId() == R.id.quest10_answer_a_container){
+            responses[9] = getResources().getString(R.string.quest_10_a);
+
+        } else if (view.getId() == R.id.quest10_answer_b_container){
+            responses[9] = getResources().getString(R.string.quest_10_b);
+
+        }else if (view.getId() == R.id.quest10_answer_c_container){
+            responses[9] = getResources().getString(R.string.quest_10_c);
+
+        }else if (view.getId() == R.id.quest10_answer_d_container){
+            responses[9] = getResources().getString(R.string.quest_10_d);
+
+        }
+        displayNextQuiz();
+
     }
 
-    public void quest12AnswerC(View view)
+
+    public void quest11Answer(View view)
     {
-        displayQuiz13(view);
+        if (view.getId() == R.id.quest11_answer_a_container){
+            responses[10] = getResources().getString(R.string.quest_11_a);
+
+        } else if (view.getId() == R.id.quest11_answer_b_container){
+            responses[10] = getResources().getString(R.string.quest_11_b);
+
+        }else if (view.getId() == R.id.quest11_answer_c_container){
+            responses[10] = getResources().getString(R.string.quest_11_c);
+
+        }else if (view.getId() == R.id.quest11_answer_d_container){
+            responses[10] = getResources().getString(R.string.quest_11_d);
+
+        }
+        displayNextQuiz();
+
     }
 
-    public void quest12AnswerD(View view)
+
+    public void quest12Answer(View view)
     {
-        displayQuiz13(view);
+        if (view.getId() == R.id.quest12_answer_a_container){
+            responses[11] = getResources().getString(R.string.quest_12_a);
+
+        } else if (view.getId() == R.id.quest12_answer_b_container){
+            responses[11] = getResources().getString(R.string.quest_12_b);
+
+        }else if (view.getId() == R.id.quest12_answer_c_container){
+            responses[11] = getResources().getString(R.string.quest_12_c);
+
+        }else if (view.getId() == R.id.quest12_answer_d_container){
+            responses[11] = getResources().getString(R.string.quest_12_d);
+
+        }else if (view.getId() == R.id.quest12_answer_e_container){
+            responses[11] = getResources().getString(R.string.quest_12_e);
+
+        }
+        displayNextQuiz();
+
     }
 
-    public void quest12AnswerE(View view)
-    {
-        displayQuiz13(view);
-    }
 
-    public void quest13AnswerA(View view)
+    public void quest13Answer(View view)
     {
+        if (view.getId() == R.id.quest13_answer_a_container){
+            responses[12] = getResources().getString(R.string.quest_13_a);
+
+        } else if (view.getId() == R.id.quest13_answer_b_container){
+            responses[12] = getResources().getString(R.string.quest_13_b);
+
+        }else if (view.getId() == R.id.quest13_answer_c_container){
+            responses[12] = getResources().getString(R.string.quest_13_b);
+
+        }else if (view.getId() == R.id.quest13_answer_d_container){
+            responses[12] = getResources().getString(R.string.quest_13_d);
+
+        }
+
         displayFinalThanksContainer();
     }
 
-    public void quest13AnswerB(View view)
-    {
-        displayFinalThanksContainer();
-    }
 
-    public void quest13AnswerC(View view)
-    {
-        displayFinalThanksContainer();
-    }
 
-    public void quest13AnswerD(View view)
-    {
-        displayFinalThanksContainer();
-    }
+
 
 }

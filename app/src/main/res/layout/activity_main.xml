@@ -41,6 +41,7 @@
             android:layout_margin="10dp"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/quizapp_start_screen"
         android:layout_width="match_parent"
@@ -54,29 +55,6 @@
             android:onClick="startQuiz"
             android:text="@string/start_quiz"
             android:layout_margin="10dp"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/user_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="start"
-        android:layout_gravity="start"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        >
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginStart="10dp"
-            android:gravity="left"
-            android:textStyle="bold"
-            android:textSize="20sp"
-            android:layout_marginEnd="10dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -122,6 +100,7 @@
             android:textSize="20sp"
             android:layout_marginEnd="10dp"/>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/question_container"
         android:layout_width="match_parent"
@@ -144,6 +123,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_1"/>
             <LinearLayout
+                android:id="@+id/quest1_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -156,7 +136,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest1AnswerA"
+                android:onClick="quest1Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -168,7 +148,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -199,6 +179,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest1_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -210,7 +191,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest1AnswerB"
+                android:onClick="quest1Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -223,7 +204,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -254,6 +235,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest1_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -265,7 +247,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest1AnswerC"
+                android:onClick="quest1Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -278,7 +260,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -309,6 +291,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest1_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -321,7 +304,7 @@
                 android:layout_marginEnd="10dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest1AnswerD"
+                android:onClick="quest1Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -333,7 +316,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -381,6 +364,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_2"/>
             <LinearLayout
+                android:id="@+id/quest2_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -393,7 +377,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest2AnswerA"
+                android:onClick="quest2Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -405,7 +389,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -436,6 +420,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest2_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -447,7 +432,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest2AnswerB"
+                android:onClick="quest2Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -460,7 +445,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -491,6 +476,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest2_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -502,7 +488,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest2AnswerC"
+                android:onClick="quest2Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -515,7 +501,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -546,6 +532,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest2_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -557,7 +544,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest2AnswerD"
+                android:onClick="quest2Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -570,7 +557,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -597,7 +584,6 @@
                         />
                 </LinearLayout>
 
-
             </LinearLayout>
 
         </LinearLayout>
@@ -619,6 +605,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_3"/>
             <LinearLayout
+                android:id="@+id/quest3_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -631,7 +618,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest3AnswerA"
+                android:onClick="quest3Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -643,7 +630,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -674,6 +661,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest3_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -685,7 +673,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest3AnswerB"
+                android:onClick="quest3Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -698,7 +686,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -729,6 +717,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest3_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -740,7 +729,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest3AnswerC"
+                android:onClick="quest3Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -753,7 +742,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -783,8 +772,8 @@
 
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest3_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -796,7 +785,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest3AnswerD"
+                android:onClick="quest3Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -809,7 +798,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -858,6 +847,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_4"/>
             <LinearLayout
+                android:id="@+id/quest4_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -870,7 +860,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest4AnswerA"
+                android:onClick="quest4Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -882,7 +872,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -911,6 +901,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest4_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -922,7 +913,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest4AnswerB"
+                android:onClick="quest4Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -935,7 +926,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -964,6 +955,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest4_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -975,7 +967,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest4AnswerC"
+                android:onClick="quest4Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -988,7 +980,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1016,8 +1008,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest4_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1029,7 +1021,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest4AnswerD"
+                android:onClick="quest4Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1042,7 +1034,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1089,6 +1081,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_5"/>
             <LinearLayout
+                android:id="@+id/quest5_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1101,7 +1094,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest5AnswerA"
+                android:onClick="quest5Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -1113,7 +1106,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1144,6 +1137,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest5_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1155,7 +1149,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest5AnswerB"
+                android:onClick="quest5Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1168,7 +1162,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1199,6 +1193,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest5_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1210,7 +1205,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest5AnswerC"
+                android:onClick="quest5Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1223,7 +1218,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1254,6 +1249,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest5_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1265,7 +1261,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest5AnswerD"
+                android:onClick="quest5Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1278,7 +1274,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1309,6 +1305,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest5_answer_e_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1320,7 +1317,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest5AnswerE"
+                android:onClick="quest5Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1333,7 +1330,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="E"
+                        android:text="@string/answer_e"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1381,6 +1378,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_6"/>
             <LinearLayout
+                android:id="@+id/quest6_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1393,7 +1391,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest6AnswerA"
+                android:onClick="quest6Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -1405,7 +1403,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1436,6 +1434,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest6_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1447,7 +1446,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest6AnswerB"
+                android:onClick="quest6Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1460,7 +1459,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1489,6 +1488,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest6_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1500,7 +1500,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest6AnswerC"
+                android:onClick="quest6Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1513,7 +1513,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1541,8 +1541,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest6_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1554,7 +1554,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest6AnswerD"
+                android:onClick="quest6Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1567,7 +1567,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1614,6 +1614,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_7"/>
             <LinearLayout
+                android:id="@+id/quest7_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1626,7 +1627,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest7AnswerA"
+                android:onClick="quest7Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -1638,7 +1639,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1669,6 +1670,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest7_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1680,7 +1682,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest7AnswerB"
+                android:onClick="quest7Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1693,7 +1695,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1724,6 +1726,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest7_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1735,7 +1738,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest7AnswerC"
+                android:onClick="quest7Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1748,7 +1751,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1777,8 +1780,8 @@
 
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest7_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1790,7 +1793,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest7AnswerD"
+                android:onClick="quest7Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1803,7 +1806,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1851,6 +1854,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_8"/>
             <LinearLayout
+                android:id="@+id/quest8_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1863,7 +1867,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest8AnswerA"
+                android:onClick="quest8Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -1875,7 +1879,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1906,6 +1910,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest8_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1917,7 +1922,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest8AnswerB"
+                android:onClick="quest8Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1930,7 +1935,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -1958,8 +1963,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest8_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -1971,7 +1976,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest8AnswerC"
+                android:onClick="quest8Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -1984,7 +1989,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2012,8 +2017,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest8_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2025,7 +2030,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest8AnswerD"
+                android:onClick="quest8Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2038,7 +2043,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2085,6 +2090,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_9"/>
             <LinearLayout
+                android:id="@+id/quest9_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2097,7 +2103,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest9AnswerA"
+                android:onClick="quest9Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -2109,7 +2115,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2140,6 +2146,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest9_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2151,7 +2158,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest9AnswerB"
+                android:onClick="quest9Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2164,7 +2171,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2195,6 +2202,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest9_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2206,7 +2214,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest9AnswerC"
+                android:onClick="quest9Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2219,7 +2227,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2249,8 +2257,8 @@
 
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest9_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2262,7 +2270,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest9AnswerD"
+                android:onClick="quest9Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2275,7 +2283,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2324,6 +2332,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_10"/>
             <LinearLayout
+                android:id="@+id/quest10_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2336,7 +2345,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest10AnswerA"
+                android:onClick="quest10Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -2348,7 +2357,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2379,6 +2388,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest10_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2390,7 +2400,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest10AnswerB"
+                android:onClick="quest10Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2403,7 +2413,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2431,8 +2441,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest10_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2444,7 +2454,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest10AnswerC"
+                android:onClick="quest10Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2457,7 +2467,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2485,8 +2495,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest10_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2498,7 +2508,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest10AnswerD"
+                android:onClick="quest10Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2511,7 +2521,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2557,6 +2567,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_11"/>
             <LinearLayout
+                android:id="@+id/quest11_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2569,7 +2580,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest11AnswerA"
+                android:onClick="quest11Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -2581,7 +2592,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2612,6 +2623,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest11_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2623,7 +2635,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest11AnswerB"
+                android:onClick="quest11Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2636,7 +2648,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2664,8 +2676,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest11_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2677,7 +2689,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest11AnswerC"
+                android:onClick="quest11Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2690,7 +2702,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2718,8 +2730,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest11_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2731,7 +2743,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest11AnswerD"
+                android:onClick="quest11Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2744,7 +2756,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2790,6 +2802,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_12"/>
             <LinearLayout
+                android:id="@+id/quest12_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2802,7 +2815,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest12AnswerA"
+                android:onClick="quest12Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -2814,7 +2827,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2845,6 +2858,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest12_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2856,7 +2870,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest12AnswerB"
+                android:onClick="quest12Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2869,7 +2883,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2897,8 +2911,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest12_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2910,7 +2924,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest12AnswerC"
+                android:onClick="quest12Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2923,7 +2937,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -2951,8 +2965,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest12_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -2964,7 +2978,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest12AnswerD"
+                android:onClick="quest12Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -2977,7 +2991,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -3005,8 +3019,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest12_answer_e_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -3018,7 +3032,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest12AnswerE"
+                android:onClick="quest12Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -3031,7 +3045,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="E"
+                        android:text="@string/answer_e"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -3077,6 +3091,7 @@
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_13"/>
             <LinearLayout
+                android:id="@+id/quest13_answer_a_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -3089,7 +3104,7 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest13AnswerA"
+                android:onClick="quest13Answer"
                 >
                 <LinearLayout
                     android:layout_width="0dp"
@@ -3101,7 +3116,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="A"
+                        android:text="@string/answer_a"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -3132,6 +3147,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/quest13_answer_b_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -3143,7 +3159,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest13AnswerB"
+                android:onClick="quest13Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -3156,7 +3172,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="B"
+                        android:text="@string/answer_b"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -3184,8 +3200,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest13_answer_c_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -3197,7 +3213,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest13AnswerC"
+                android:onClick="quest13Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -3210,7 +3226,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="C"
+                        android:text="@string/answer_c"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
@@ -3238,8 +3254,8 @@
                 </LinearLayout>
             </LinearLayout>
 
-
             <LinearLayout
+                android:id="@+id/quest13_answer_d_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -3251,7 +3267,7 @@
                 android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest13AnswerD"
+                android:onClick="quest13Answer"
                 android:layout_marginEnd="10dp"
                 >
                 <LinearLayout
@@ -3264,7 +3280,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="D"
+                        android:text="@string/answer_d"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginStart="10dp"
