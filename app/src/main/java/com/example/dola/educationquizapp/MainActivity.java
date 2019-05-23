@@ -41,34 +41,22 @@ public class MainActivity extends AppCompatActivity {
         hideAllQuizContainer();
     }
 
-    void incrementCurrentQuizNumber()
-    {
-        currentQiuz++;
-    }
 
+    /**
+     * Update the counter of the actual quiz
+     */
     void updateCurrentQuizStatus(){
-        incrementCurrentQuizNumber();
+        currentQiuz++;
         TotalQuizTextView.setText("" + totalQuiz);
         CurrentQuizTextView.setText("" + currentQiuz);
     }
 
-    public void primary(View view){
-        Toast.makeText(this, "Primary Cliked", Toast.LENGTH_SHORT).show();
-        displayFinalThanksContainer();
-    }
 
-    public void college(View view){
-        Toast.makeText(this, "College Cliked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void lycee(View view){
-        Toast.makeText(this, "Lycee Cliked", Toast.LENGTH_SHORT).show();
-    }
-
-    public void university(View view){
-        Toast.makeText(this, "University Cliked", Toast.LENGTH_SHORT).show();
-    }
-
+    /**
+     *  This method verify that tha user give it firstname and lastname
+     *  And then start the quiz page to allow the user to start.
+     * @param view
+     */
     public void startQuiz(View view)
     {
         name = nameEdiText.getText().toString();
@@ -100,11 +88,11 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
-    public void reinitializeQuiz(View view)
-    {
 
-    }
-
+    /**
+     * Display the  quiz 1
+     * @param view
+     */
     public void displayQuiz1(View view)
     {
         hideAllQuizContainer();
@@ -112,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
         quiz1Container.setVisibility(View.VISIBLE);
     }
 
+
+    /**
+     * Display the  quiz 2
+     * @param view
+     */
     public void displayQuiz2(View view)
     {
         hideAllQuizContainer();
@@ -120,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 3
+     * @param view
+     */
     public void displayQuiz3(View view)
     {
         hideAllQuizContainer();
@@ -128,6 +125,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 4
+     * @param view
+     */
     public void displayQuiz4(View view)
     {
         hideAllQuizContainer();
@@ -136,6 +137,11 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+
+    /**
+     * Display the  quiz 5
+     * @param view
+     */
     public void displayQuiz5(View view)
     {
         hideAllQuizContainer();
@@ -144,6 +150,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 6
+     * @param view
+     */
     public void displayQuiz6(View view)
     {
         hideAllQuizContainer();
@@ -152,6 +162,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 7
+     * @param view
+     */
     public void displayQuiz7(View view)
     {
         hideAllQuizContainer();
@@ -160,6 +174,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 8
+     * @param view
+     */
     public void displayQuiz8(View view)
     {
         hideAllQuizContainer();
@@ -168,6 +186,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 9
+     * @param view
+     */
     public void displayQuiz9(View view)
     {
         hideAllQuizContainer();
@@ -176,6 +198,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 10
+     * @param view
+     */
     public void displayQuiz10(View view)
     {
         hideAllQuizContainer();
@@ -184,6 +210,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 11
+     * @param view
+     */
     public void displayQuiz11(View view)
     {
         hideAllQuizContainer();
@@ -192,6 +222,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the  quiz 12
+     * @param view
+     */
     public void displayQuiz12(View view)
     {
         hideAllQuizContainer();
@@ -200,6 +234,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Display the thirdthen quiz
+     * @param view
+     */
     public void displayQuiz13(View view)
     {
         hideAllQuizContainer();
@@ -208,6 +246,10 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentQuizStatus();
     }
 
+    /**
+     * Hide all unecessary elements
+     *
+     * */
     private void hideAllQuizContainer()
     {
         LinearLayout quiz1Container = findViewById(R.id.question_1);
@@ -240,6 +282,9 @@ public class MainActivity extends AppCompatActivity {
         quiz13Container.setVisibility(View.GONE);
     }
 
+    /**
+     * Hide Counter container
+     */
     void hideCounterContainer()
     {
         LinearLayout statusContainer = findViewById(R.id.status_container);
@@ -250,6 +295,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Display a final container to thank the user to use our application.
+     */
     private  void displayFinalThanksContainer()
     {
         hideAllQuizContainer();
@@ -262,6 +310,10 @@ public class MainActivity extends AppCompatActivity {
 
         currentQiuz = 0;
     }
+
+    /*
+     Catch each quiz anwser
+     */
 
     public void quest1AnswerA(View view)
     {
@@ -298,6 +350,11 @@ public class MainActivity extends AppCompatActivity {
         displayQuiz3(view);
     }
 
+    public void quest2AnswerD(View view)
+    {
+        displayQuiz3(view);
+    }
+
     public void quest3AnswerA(View view)
     {
         displayQuiz4(view);
@@ -309,6 +366,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void quest3AnswerC(View view)
+    {
+        displayQuiz4(view);
+    }
+
+    public void quest3AnswerD(View view)
     {
         displayQuiz4(view);
     }
@@ -329,8 +391,10 @@ public class MainActivity extends AppCompatActivity {
         displayQuiz5(view);
     }
 
-
-
+    public void quest4AnswerD(View view)
+    {
+        displayQuiz5(view);
+    }
 
     public void quest5AnswerA(View view)
     {
@@ -372,6 +436,11 @@ public class MainActivity extends AppCompatActivity {
         displayQuiz7(view);
     }
 
+    public void quest6AnswerD(View view)
+    {
+        displayQuiz7(view);
+    }
+
 
     public void quest7AnswerA(View view)
     {
@@ -385,6 +454,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void quest7AnswerC(View view)
+    {
+        displayQuiz8(view);
+    }
+
+    public void quest7AnswerD(View view)
     {
         displayQuiz8(view);
     }
@@ -421,6 +495,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void quest9AnswerC(View view)
+    {
+        displayQuiz10(view);
+    }
+
+    public void quest9AnswerD(View view)
     {
         displayQuiz10(view);
     }

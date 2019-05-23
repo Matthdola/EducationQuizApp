@@ -13,16 +13,19 @@
     <string name = "quest_2_a"> Yes </string>
     <string name = "quest_2_b"> No </string>
     <string name = "quest_2_c"> It depends on the days </string>
+    <string name = "quest_2_d"> It do not know</string>
 
     <string name = "quest_3"> How did his schooling go in previous years? </string>
     <string name = "quest_3_a"> Well </string>
     <string name = "quest_3_b"> Moderately </string>
     <string name = "quest_3_c"> Pretty badly </string>
+    <string name = "quest_3_d">  badly </string>
 
     <string name = "quest_4"> Has it redoubled? </string>
     <string name = "quest_4_a"> Once </string>
     <string name = "quest_4_b"> More than once </string>
-    <string name = "quest_4_c"> Never </string>
+    <string name = "quest_4_c"> I do not remember </string>
+    <string name = "quest_4_d"> Never </string>
 
     <string name = "quest_5"> Did he have any problems? </string>
     <string name = "quest_5_a"> Yes, with a particular subject : </string>
@@ -32,16 +35,18 @@
     <string name = "quest_5_e"> No </string>
 
 
-    <string name = "quest_6"> Was your child still in school when he was in primary school </string>
+    <string name = "quest_6"> Was your child still in school when he was in primary school? </string>
     <string name = "quest_6_a"> Yes, only one year </string>
     <string name = "quest_6_b"> Yes, several years </string>
     <string name = "quest_6_c"> Yes, all years </string>
+    <string name = "quest_6_d"> No, Never </string>
 
 
     <string name = "quest_7"> If it stayed in the study, did it succeed in working on it? </string>
     <string name = "quest_7_a"> Yes, most of the time </string>
     <string name = "quest_7_b"> Yes, sometimes </string>
-    <string name = "quest_7_c"> No </string>
+    <string name = "quest_7_c"> Yes, every time </string>
+    <string name = "quest_7_d"> No </string>
 
     <string name = "quest_8"> What are its results now? </string>
     <string name = "quest_8_a"> Rather weak </string>
@@ -52,7 +57,8 @@
     <string name = "quest_9"> What is the first language studied at school by your child? </string>
     <string name = "quest_9_a"> English </string>
     <string name = "quest_9_b"> French </string>
-    <string name = "quest_9_c"> Other </string>
+    <string name = "quest_9_c"> German </string>
+    <string name = "quest_9_d"> Other </string>
 
     <string name = "quest_10"> How did you choose this language? </string>
     <string name = "quest_10_a"> The mother chose </string>
