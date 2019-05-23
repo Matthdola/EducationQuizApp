@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Education Quiz App</string>
+    <string name="welcome_message">Welcome to our Education Quiz application</string>
+    <string name="give_name">Please give us your Firstname and Lastname</string>
+
+    <string name = "quest_1"> According to you, how does your child feel with his classmates in college? </string>
+    <string name = "quest_1_a"> At ease </string>
+    <string name = "quest_1_b"> Uncomfortable </string>
+    <string name = "quest_1_c"> It depends on the days </string>
+    <string name = "quest_1_d"> I do not know </string>
+
+    <string name = "quest_2"> Is he happy to go to college? </string>
+    <string name = "quest_2_a"> Yes </string>
+    <string name = "quest_2_b"> No </string>
+    <string name = "quest_2_c"> It depends on the days </string>
+
+    <string name = "quest_3"> How did his schooling go in previous years? </string>
+    <string name = "quest_3_a"> Well </string>
+    <string name = "quest_3_b"> Moderately </string>
+    <string name = "quest_3_c"> Pretty badly </string>
+
+    <string name = "quest_4"> Has it redoubled? </string>
+    <string name = "quest_4_a"> Once </string>
+    <string name = "quest_4_b"> More than once </string>
+    <string name = "quest_4_c"> Never </string>
+
+    <string name = "quest_5"> Did he have any problems? </string>
+    <string name = "quest_5_a"> Yes, with a particular subject : </string>
+    <string name=  "quest_5_b"> Yes, with a teacher\'s methods</string>
+    <string name = "quest_5_c"> Yes, with the personality of a teacher </string>
+    <string name = "quest_5_d"> Yes, with his classmates </string>
+    <string name = "quest_5_e"> No </string>
+
+
+    <string name = "quest_6"> Was your child still in school when he was in primary school </string>
+    <string name = "quest_6_a"> Yes, only one year </string>
+    <string name = "quest_6_b"> Yes, several years </string>
+    <string name = "quest_6_c"> Yes, all years </string>
+
+
+    <string name = "quest_7"> If it stayed in the study, did it succeed in working on it? </string>
+    <string name = "quest_7_a"> Yes, most of the time </string>
+    <string name = "quest_7_b"> Yes, sometimes </string>
+    <string name = "quest_7_c"> No </string>
+
+    <string name = "quest_8"> What are its results now? </string>
+    <string name = "quest_8_a"> Rather weak </string>
+    <string name = "quest_8_b"> Means </string>
+    <string name = "quest_8_c"> Coupons </string>
+    <string name = "quest_8_d"> Very good </string>
+
+    <string name = "quest_9"> What is the first language studied at school by your child? </string>
+    <string name = "quest_9_a"> English </string>
+    <string name = "quest_9_b"> French </string>
+    <string name = "quest_9_c"> Other </string>
+
+    <string name = "quest_10"> How did you choose this language? </string>
+    <string name = "quest_10_a"> The mother chose </string>
+    <string name = "quest_10_b"> The father chose </string>
+    <string name = "quest_10_c"> Parents chose after discussing it together </string>
+    <string name = "quest_10_d"> The child chose after discussing it with his parents </string>
+
+
+    <string name = "quest_11"> Generally speaking, does your child talk to you about school? </string>
+    <string name = "quest_11_a"> No, never </string>
+    <string name = "quest_11_b"> Yes, from time to time (about once a month) </string>
+    <string name = "quest_11_c"> Yes, often (at least once a week) </string>
+    <string name = "quest_11_d"> Yes, every day </string>
+
+    <string name = "quest_12"> When does your child do his homework most often? </string>
+    <string name = "quest_12_a"> As soon as he comes back from college </string>
+    <string name = "quest_12_b"> After the evening meal </string>
+    <string name = "quest_12_c"> In the evening, after playing a little while </string>
+    <string name = "quest_12_d"> After playing a long time </string>
+    <string name = "quest_12_e"> In middle school, during the permanences or the moments planned for this purpose </string>
+
+    <string name = "quest_13"> In general, how are you aware of its results? </string>
+    <string name = "quest_13_a"> By signing his report cards </string>
+    <string name = "quest_13_b"> Because it informs you regularly (at least once a week) </string>
+    <string name = "quest_13_c"> Because you ask it regularly (at least once a week) </string>
+    <string name = "quest_13_d"> Because it informs you from time to time (about once a month) </string>
+
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last name</string>
+    <string name="start_quiz">Start quiz</string>
+    <string name="restart_quiz">Restart quiz</string>
+    <string name="thankyou_message">Thank you  for taking time to use our Quiz application</string>
+</resources>
