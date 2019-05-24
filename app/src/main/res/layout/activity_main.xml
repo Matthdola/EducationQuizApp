@@ -65,8 +65,7 @@
         android:gravity="end"
         android:layout_gravity="end"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        >
+        android:layout_marginBottom="10dp">
         <TextView
             android:id="@+id/current_quiz"
             android:layout_width="wrap_content"
@@ -106,6 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/question_1"
             android:layout_width="match_parent"
@@ -122,229 +122,73 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_1"/>
+
             <LinearLayout
-                android:id="@+id/quest1_answer_a_container"
+                android:id="@+id/quest1_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest1Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <RadioButton
+                        android:id="@+id/checkbox_quest_1_a"
+                        android:layout_width="156dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/quest_1_a"
-                        android:textColor="#212121"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
+                        android:onClick="quest1Answer"
+                        android:text="@string/quest_1_a"/>
+                    <RadioButton
+                        android:id="@+id/checkbox_quest_1_b"
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="quest1Answer"
+                        android:text="@string/quest_1_b"/>
+                    <RadioButton
+                        android:id="@+id/checkbox_quest_1_c"
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="quest1Answer"
+                        android:text="@string/quest_1_c"/>
+                    <RadioButton
+                        android:id="@+id/checkbox_quest_1_d"
+                        android:layout_width="156dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="quest1Answer"
+                        android:text="@string/quest_1_d"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest1_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest1Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_1_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest1_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest1Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_1_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest1_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginEnd="10dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest1Answer"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_1_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -362,228 +206,74 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:text="@string/quest_2"/>
+                android:text="@string/quest_1"/>
+
             <LinearLayout
-                android:id="@+id/quest2_answer_a_container"
+                android:id="@+id/quest2_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest2Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_2_a"
+                    android:layout_width="156dp"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_2_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest2_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest2Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest2Answer"
+                    android:text="@string/quest_2_a" />
+                <RadioButton
+                    android:id="@+id/checkbox_quest_2_b"
+                    android:layout_width="243dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest2Answer"
+                    android:text="@string/quest_1_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_2_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_2_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_1_c"
+                    android:onClick="quest2Answer"/>
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest2_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest2Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_2_d"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_1_d"
+                    android:onClick="quest2Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_2_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest2_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest2Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_2_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -603,229 +293,76 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:text="@string/quest_3"/>
+                android:text="@string/quest_1"/>
+
             <LinearLayout
-                android:id="@+id/quest3_answer_a_container"
+                android:id="@+id/quest3_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest3Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
+
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_3_a"
+                    android:layout_width="156dp"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_3_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest3Answer"
+                    android:text="@string/quest_3_a" />
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest3_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest3Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_3_b"
+                    android:layout_width="243dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest3Answer"
+                    android:text="@string/quest_3_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_3_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_3_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_3_c"
+                    android:onClick="quest3Answer"/>
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest3_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest3Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_3_d"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_3_d"
+                    android:onClick="quest3Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_3_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest3_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest3Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_3_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -846,220 +383,75 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_4"/>
-            <LinearLayout
-                android:id="@+id/quest4_answer_a_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:clickable="true"
-                android:focusable="true"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginEnd="10dp"
-                android:onClick="quest4Answer"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_4_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/quest4_answer_b_container"
+                android:id="@+id/quest4_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
                 android:clickable="true"
                 android:focusable="true"
-                android:onClick="quest4Answer"
+                android:textStyle="bold"
+                android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_4_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest4_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest4Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_4_a"
+                    android:layout_width="156dp"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_4_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest4Answer"
+                    android:text="@string/quest_4_a" />
 
-            <LinearLayout
-                android:id="@+id/quest4_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest4Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_4_b"
+                    android:layout_width="243dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest4Answer"
+                    android:text="@string/quest_4_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_4_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_4_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_4_c"
+                    android:onClick="quest4Answer"/>
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_4_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_4_d"
+                    android:onClick="quest4Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -1080,285 +472,84 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_5"/>
+
             <LinearLayout
-                android:id="@+id/quest5_answer_a_container"
+                android:id="@+id/quest5_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:onClick="quest5Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_5_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <CheckBox
+                    android:id="@+id/checkbox_quest_5_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest5Answer"
+                    android:text="@string/quest_5_a" />
 
+                <CheckBox
+                    android:id="@+id/checkbox_quest_5_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest5Answer"
+                    android:text="@string/quest_5_b" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_5_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_5_c"
+                    android:onClick="quest5Answer"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_5_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_5_d"
+                    android:onClick="quest5Answer"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_5_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_5_e"
+                    android:onClick="quest5Answer"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest5_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest5Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_5_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest5_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest5Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_5_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest5_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest5Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_5_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest5_answer_e_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest5Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_e"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_5_e"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -1377,222 +568,76 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_6"/>
+
             <LinearLayout
-                android:id="@+id/quest6_answer_a_container"
+                android:id="@+id/quest6_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:onClick="quest6Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_6_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_6_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest6Answer"
+                    android:text="@string/quest_6_a" />
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/checkbox_quest_6_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest6Answer"
+                    android:text="@string/quest_6_b" />
 
-            <LinearLayout
-                android:id="@+id/quest6_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest6Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_6_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_6_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_6_c"
+                    android:onClick="quest6Answer"/>
 
-            <LinearLayout
-                android:id="@+id/quest6_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest6Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_6_d"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_6_d"
+                    android:onClick="quest6Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_6_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest6_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest6Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_6_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -1613,226 +658,75 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_7"/>
+
             <LinearLayout
-                android:id="@+id/quest7_answer_a_container"
+                android:id="@+id/quest7_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest7Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
+
+                <RadioGroup
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_7_a"
+                    android:layout_width="156dp"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_7_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest7Answer"
+                    android:text="@string/quest_7_a" />
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest7_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest7Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_7_b"
+                    android:layout_width="243dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest7Answer"
+                    android:text="@string/quest_7_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_7_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_7_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_7_c"
+                    android:onClick="quest7Answer"/>
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest7_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest7Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_7_d"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_7_d"
+                    android:onClick="quest7Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_7_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest7_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest7Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_7_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -1853,222 +747,75 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_8"/>
+
             <LinearLayout
-                android:id="@+id/quest8_answer_a_container"
+                android:id="@+id/quest8_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest8Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_8_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_8_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest8Answer"
+                    android:text="@string/quest_8_a" />
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/checkbox_quest_8_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest8Answer"
+                    android:text="@string/quest_8_b" />
 
-            <LinearLayout
-                android:id="@+id/quest8_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest8Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_8_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_8_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_8_c"
+                    android:onClick="quest8Answer"/>
 
-            <LinearLayout
-                android:id="@+id/quest8_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest8Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <RadioButton
+                    android:id="@+id/checkbox_quest_8_d"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_8_d"
+                    android:onClick="quest8Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_8_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest8_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest8Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_8_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -2088,229 +835,71 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:text="@string/quest_9"/>
+                android:text="@string/quest_1"/>
+
             <LinearLayout
-                android:id="@+id/quest9_answer_a_container"
+                android:id="@+id/quest9_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest9Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_9_a"
+                    android:layout_width="156dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest9Answer"
+                    android:text="@string/quest_9_a" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_9_b"
+                    android:layout_width="243dp"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_9_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest9Answer"
+                    android:text="@string/quest_9_b" />
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest9_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest9Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                <CheckBox
+                    android:id="@+id/checkbox_quest_9_c"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_9_c"
+                    android:onClick="quest9Answer"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_9_d"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_9_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest9_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest9Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_9_d"
+                    android:onClick="quest9Answer"/>
+                <Button
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_9_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest9_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest9Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_9_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-
-
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
         </LinearLayout>
@@ -2331,223 +920,77 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_10"/>
+
             <LinearLayout
-                android:id="@+id/quest10_answer_a_container"
+                android:id="@+id/quest10_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest10Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_10_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_10_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest10Answer"
+                    android:text="@string/quest_10_a" />
 
+                <RadioButton
+                    android:id="@+id/checkbox_quest_10_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest10Answer"
+                    android:text="@string/quest_10_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_10_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_10_c"
+                    android:onClick="quest10Answer"/>
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_10_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_10_d"
+                    android:onClick="quest10Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest10_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest10Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_10_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest10_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest10Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_10_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest10_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest10Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_10_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -2566,223 +1009,77 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_11"/>
+
             <LinearLayout
-                android:id="@+id/quest11_answer_a_container"
+                android:id="@+id/quest11_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest11Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_11_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_11_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest11Answer"
+                    android:text="@string/quest_11_a" />
 
+                <RadioButton
+                    android:id="@+id/checkbox_quest_11_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest11Answer"
+                    android:text="@string/quest_11_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_11_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_11_c"
+                    android:onClick="quest11Answer"/>
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_11_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_11_d"
+                    android:onClick="quest11Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest11_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest11Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_11_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest11_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest11Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_11_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest11_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest11Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_11_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -2801,277 +1098,83 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_12"/>
+
             <LinearLayout
-                android:id="@+id/quest12_answer_a_container"
+                android:id="@+id/quest12_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest12Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_12_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <CheckBox
+                    android:id="@+id/checkbox_quest_12_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest12Answer"
+                    android:text="@string/quest_12_a" />
 
+                <CheckBox
+                    android:id="@+id/checkbox_quest_12_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest12Answer"
+                    android:text="@string/quest_12_b" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_12_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_12_c"
+                    android:onClick="quest12Answer"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_12_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_12_d"
+                    android:onClick="quest12Answer"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_12_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_12_e"
+                    android:onClick="quest12Answer"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest12_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest12Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_12_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest12_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest12Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_12_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest12_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest12Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_12_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest12_answer_e_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest12Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_e"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_12_e"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -3090,224 +1193,213 @@
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
                 android:text="@string/quest_13"/>
+
             <LinearLayout
-                android:id="@+id/quest13_answer_a_container"
+                android:id="@+id/quest13_answer_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_marginBottom="10dp"
                 android:layout_marginStart="10dp"
                 android:gravity="left"
                 android:clickable="true"
                 android:focusable="true"
-                android:background="#7cb342"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginEnd="10dp"
-                android:onClick="quest13Answer"
                 >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_a"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_13_a"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
 
+                <CheckBox
+                    android:id="@+id/checkbox_quest_13_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest1Answer"
+                    android:text="@string/quest_13_a" />
 
+                <CheckBox
+                    android:id="@+id/checkbox_quest_13_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest13Answer"
+                    android:text="@string/quest_13_b" />
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_13_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_13_c"
+                    android:onClick="quest13Answer"/>
+
+                <CheckBox
+                    android:id="@+id/checkbox_quest_13_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_13_d"
+                    android:onClick="quest13Answer"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/quest13_answer_b_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest13Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_b"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_13_b"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest13_answer_c_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest13Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_c"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_13_c"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/quest13_answer_d_container"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp"
-                android:layout_marginStart="10dp"
-                android:gravity="left"
-                android:background="#7cb342"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:clickable="true"
-                android:focusable="true"
-                android:onClick="quest13Answer"
-                android:layout_marginEnd="10dp"
-                >
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:text="@string/answer_d"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="0dp"
-                    android:layout_weight="9.5"
-                    android:layout_height="wrap_content"
-                    android:background="#eeeeee"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/quest_13_d"
-                        android:textColor="#212121"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/question_14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/quest_14"/>
+
+            <LinearLayout
+                android:id="@+id/quest14_answer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginEnd="10dp"
+                >
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:id="@+id/checkbox_quest_14_a"
+                    android:layout_width="156dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest14Answer"
+                    android:text="@string/quest_14_a" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_14_b"
+                    android:layout_width="243dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:onClick="quest14Answer"
+                    android:text="@string/quest_14_b" />
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_14_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_14_c"
+                    android:onClick="quest14Answer"/>
+
+                <RadioButton
+                    android:id="@+id/checkbox_quest_14_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/quest_14_d"
+                    android:onClick="quest14Answer"/>
+                </RadioGroup>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/next"
+                    android:onClick="displayNextQuiz"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/question_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/quest_15"/>
+
+            <LinearLayout
+                android:id="@+id/quest15_answer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="left"
+                android:clickable="true"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginEnd="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/quest_15_a"
+                    android:layout_width="match_parent"
+                    android:hint="-----"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/submit_quiz"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit_quiz"
+                    android:onClick="submitQuiz"
+                    android:layout_margin="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
