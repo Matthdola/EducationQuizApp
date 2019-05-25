@@ -28,7 +28,7 @@
     <string name = "quest_4_d"> Never </string>
 
     <string name = "quest_5"> Did he have any problems? </string>
-    <string name = "quest_5_a"> Yes, with a particular subject : </string>
+    <string name = "quest_5_a"> Yes, with a particular subject</string>
     <string name=  "quest_5_b"> Yes, with a teacher\'s methods</string>
     <string name = "quest_5_c"> Yes, with the personality of a teacher </string>
     <string name = "quest_5_d"> Yes, with his classmates </string>
@@ -101,8 +101,8 @@
 
     <string name="missingbrothermsg">Please give the number of brother(s)</string>
     <string name="promise_child_msg">Congratulation, you are a good father and your child is promising</string>
-    <string name="average_child_msg">You child is on the average</string>
-    <string name="risque_child_msg">You child need more attention and coaching</string>
+    <string name="average_child_msg">You child is on the average, he need attention</string>
+    <string name="risque_child_msg">You child is not well followed and need more attention and coaching if you want his success</string>
     <string name="submit_quiz">Submit quiz</string>
     <string name="next">Next</string>
     <string name="give_anwser_msg">Please give an anwser</string>

@@ -16,18 +16,11 @@ public class MainActivity extends AppCompatActivity {
     boolean responseGiven = false;
 
     private TextView CurrentQuizTextView, TotalQuizTextView ;
-    private EditText nameEdiText, surnameEditText;
-    private String name, surname;
-    private String[] responses = new String[13];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        nameEdiText = findViewById(R.id.name_edit);
-
-        surnameEditText = findViewById(R.id.surname_edit);
 
         TotalQuizTextView = findViewById(R.id.total_quiz);
         CurrentQuizTextView = findViewById(R.id.current_quiz);
@@ -58,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout welcome_container = findViewById(R.id.welcome_container);
         welcome_container.setVisibility(View.GONE);
+
         LinearLayout startbtn_container = findViewById(R.id.quizapp_start_screen);
         startbtn_container.setVisibility(View.GONE);
         responseGiven = true;
@@ -163,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Hide all unecessary elements
+     * Hide all unnecessary elements
      *
      * */
     private void hideAllQuizContainer()
@@ -222,46 +216,47 @@ public class MainActivity extends AppCompatActivity {
         thankContainer.setVisibility(View.VISIBLE);
 
         TextView username = findViewById(R.id.username_in_thank);
-        username.setText(String.format("%s %s", name, surname));
+
+        username.setText(String.format("The score of evaluation of your children status in the school is  %s / %s", score, totalQuiz));
 
         currentQiuz = 0;
     }
 
-    /*
-     Catch each quiz answer
+    /**
+     * These methods allow to
      */
 
     public void quest1Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_1_a){
+        if (view.getId() == R.id.quest_1_a){
             score++;
 
-        } else if (view.getId() == R.id.checkbox_quest_1_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_1_b){
+            score += 0.2;
 
-        }else if (view.getId() == R.id.checkbox_quest_1_c){
+        }else if (view.getId() == R.id.quest_1_c){
             score += 0.5;
 
-        }else if (view.getId() == R.id.checkbox_quest_1_d){
-            score += 0.2;
+        }else if (view.getId() == R.id.quest_1_d){
+            score += 0;
         }
     }
 
     public void quest2Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_2_a){
+        if (view.getId() == R.id.quest_2_a){
             score += 1;
 
-        } else if (view.getId() == R.id.checkbox_quest_2_b){
+        } else if (view.getId() == R.id.quest_2_b){
             score += 0;
 
-        } else if (view.getId() == R.id.checkbox_quest_2_c){
+        } else if (view.getId() == R.id.quest_2_c){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_2_d){
-            score += 0.1;
+        } else if (view.getId() == R.id.quest_2_d){
+            score += 0;
 
         }
     }
@@ -269,17 +264,17 @@ public class MainActivity extends AppCompatActivity {
     public void quest3Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_3_a){
-            score += 0.25;
+        if (view.getId() == R.id.quest_3_a){
+            score += 1;
 
-        } else if (view.getId() == R.id.checkbox_quest_3_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_3_b){
+            score += 0.5;
 
-        } else if (view.getId() == R.id.checkbox_quest_3_c){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_3_c){
+            score += 0.2;
 
-        } else if (view.getId() == R.id.checkbox_quest_3_d){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_3_d){
+            score += 0;
         }
 
     }
@@ -288,17 +283,17 @@ public class MainActivity extends AppCompatActivity {
     public void quest4Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_4_a){
-            score += 0.25;
+        if (view.getId() == R.id.quest_4_a){
+            score += 0.5;
 
-        } else if (view.getId() == R.id.checkbox_quest_4_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_4_b){
+            score += 0;
 
-        } else if (view.getId() == R.id.checkbox_quest_4_c){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_4_c){
+            score += 0.2;
 
-        } else if (view.getId() == R.id.checkbox_quest_4_d){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_4_d){
+            score += 1;
         }
     }
 
@@ -306,60 +301,58 @@ public class MainActivity extends AppCompatActivity {
     public void quest5Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_5_a){
+        if (view.getId() == R.id.quest_5_a){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_5_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_5_b){
+            score += 0.2;
 
-        }else if (view.getId() == R.id.checkbox_quest_5_c){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_5_c){
+            score += 0;
 
-        }else if (view.getId() == R.id.checkbox_quest_5_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_5_d){
+            score += 0;
 
-        }else if (view.getId() == R.id.checkbox_quest_5_e){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_5_e){
+            score += 1;
 
         }
-
     }
 
 
     public void quest6Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_6_a){
-            score += 0.25;
+        if (view.getId() == R.id.quest_6_a){
+            score += 0.5;
 
-        } else if (view.getId() == R.id.checkbox_quest_6_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_6_b){
+            score += 0.75;
 
-        }else if (view.getId() == R.id.checkbox_quest_6_c){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_6_c){
+            score += 1;
 
-        }else if (view.getId() == R.id.checkbox_quest_6_d){
+        }else if (view.getId() == R.id.quest_6_d){
             score += 0.25;
 
         }
-
     }
 
 
     public void quest7Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_7_a){
+        if (view.getId() == R.id.quest_7_a){
+            score += 0.5;
+
+        } else if (view.getId() == R.id.quest_7_b){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_7_b){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_7_c){
+            score += 1;
 
-        }else if (view.getId() == R.id.checkbox_quest_7_c){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.checkbox_quest_7_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_7_d){
+            score += 0;
 
         }
 
@@ -369,17 +362,17 @@ public class MainActivity extends AppCompatActivity {
     public void quest8Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_8_a){
+        if (view.getId() == R.id.quest_8_a){
+            score += 0;
+
+        } else if (view.getId() == R.id.quest_8_b){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_8_b){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_8_c){
+            score += 0.75;
 
-        }else if (view.getId() == R.id.checkbox_quest_8_c){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.checkbox_quest_8_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_8_d){
+            score += 1;
 
         }
 
@@ -389,16 +382,16 @@ public class MainActivity extends AppCompatActivity {
     public void quest9Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_9_a){
+        if (view.getId() == R.id.quest_9_a){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_9_b){
+        } else if (view.getId() == R.id.quest_9_b){
             score += 0.25;
 
-        }else if (view.getId() == R.id.checkbox_quest_9_c){
+        }else if (view.getId() == R.id.quest_9_c){
             score += 0.25;
 
-        }else if (view.getId() == R.id.checkbox_quest_9_d){
+        }else if (view.getId() == R.id.quest_9_d){
             score += 0.25;
 
         }
@@ -408,36 +401,35 @@ public class MainActivity extends AppCompatActivity {
     public void quest10Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_10_a){
+        if (view.getId() == R.id.quest_10_a){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_10_b){
+        } else if (view.getId() == R.id.quest_10_b){
             score += 0.25;
 
-        }else if (view.getId() == R.id.checkbox_quest_10_c){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_10_c){
+            score += 1;
 
-        }else if (view.getId() == R.id.checkbox_quest_10_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_10_d){
+            score += 0.75;
 
         }
-
     }
 
 
     public void quest11Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_11_a){
+        if (view.getId() == R.id.quest_11_a){
+            score += 0;
+
+        } else if (view.getId() == R.id.quest_11_b){
+            score += 0.5;
+
+        }else if (view.getId() == R.id.quest_11_c){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_11_b){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.checkbox_quest_11_c){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.checkbox_quest_11_d){
+        }else if (view.getId() == R.id.quest_11_d){
             score += 0.25;
 
         }
@@ -448,19 +440,19 @@ public class MainActivity extends AppCompatActivity {
     public void quest12Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_12_a){
+        if (view.getId() == R.id.quest_12_a){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_12_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_12_b){
+            score += 0.5;
 
-        }else if (view.getId() == R.id.checkbox_quest_12_c){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_12_c){
+            score += 0.5;
 
-        }else if (view.getId() == R.id.checkbox_quest_12_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_12_d){
+            score += 0;
 
-        }else if (view.getId() == R.id.checkbox_quest_12_e){
+        }else if (view.getId() == R.id.quest_12_e){
             score += 0.25;
 
         }
@@ -471,17 +463,17 @@ public class MainActivity extends AppCompatActivity {
     public void quest13Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_13_a){
-            score += 0.25;
+        if (view.getId() == R.id.quest_13_a){
+            score += 0.5;
 
-        } else if (view.getId() == R.id.checkbox_quest_13_b){
-            score += 0.25;
+        } else if (view.getId() == R.id.quest_13_b){
+            score += 1;
 
-        }else if (view.getId() == R.id.checkbox_quest_13_c){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_13_c){
+            score += 0.75;
 
-        }else if (view.getId() == R.id.checkbox_quest_13_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_13_d){
+            score += 0.5;
 
         }
 
@@ -490,21 +482,24 @@ public class MainActivity extends AppCompatActivity {
     public void quest14Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.checkbox_quest_14_a){
+        if (view.getId() == R.id.quest_14_a){
+            score += 0.75;
+
+        } else if (view.getId() == R.id.quest_14_b){
+            score += 1;
+
+        }else if (view.getId() == R.id.quest_14_c){
             score += 0.25;
 
-        } else if (view.getId() == R.id.checkbox_quest_14_b){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.checkbox_quest_14_c){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.checkbox_quest_14_d){
-            score += 0.25;
+        }else if (view.getId() == R.id.quest_14_d){
+            score += 0;
 
         }
     }
 
+    /**
+     * To submit the quiz after answer question and get the score
+     */
     public void submitQuiz(View view)
     {
         EditText nbOfBrotherEdit = findViewById(R.id.quest_15_a);
@@ -518,7 +513,7 @@ public class MainActivity extends AppCompatActivity {
             score += 1;
         }
 
-        String resultMsg = "Your score is " + score + "\n";
+        String resultMsg = String.format("Your score is %s / %s \n", score, totalQuiz );
         if (score < 7){
             resultMsg += getString(R.string.risque_child_msg);
 
@@ -531,5 +526,9 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, resultMsg, Toast.LENGTH_SHORT).show();
 
         displayFinalThanksContainer();
+    }
+
+    void quitApp(){
+        finish();
     }
 }
