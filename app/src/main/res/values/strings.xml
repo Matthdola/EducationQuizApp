@@ -106,5 +106,6 @@
     <string name="submit_quiz">Submit quiz</string>
     <string name="next">Next</string>
     <string name="give_anwser_msg">Please give an anwser</string>
+    <string name="quit_app">Quit App</string>
 
 </resources>

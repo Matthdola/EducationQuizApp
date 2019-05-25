@@ -528,7 +528,7 @@ public class MainActivity extends AppCompatActivity {
         displayFinalThanksContainer();
     }
 
-    void quitApp(){
+    public void quitApp(View view){
         finish();
     }
 }
