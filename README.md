@@ -6,7 +6,13 @@ This project is part of the training projects of udacity nanodegree
 
 Below is the look of the application on device.
 
-<img src="appscreenshot/scoreappscreenshot.png" width="400" >
+<img src="quizappscreenshots/startscreen.png" width="400" >
+
+<img src="quizappscreenshots/quiz3screen.png" width="400" >
+
+<img src="quizappscreenshots/quiz15screen.png" width="400" >
+
+<img src="quizappscreenshots/resultscreen.png.png" width="400" >
 
 
 Pre-requisites
