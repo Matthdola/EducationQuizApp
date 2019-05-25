@@ -8,6 +8,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     int totalQuiz = 15;
@@ -15,18 +18,38 @@ public class MainActivity extends AppCompatActivity {
     float score = 0;
     boolean responseGiven = false;
 
-    private TextView CurrentQuizTextView, TotalQuizTextView ;
+    @BindView(R.id.current_quiz) TextView CurrentQuizTextView;
+    @BindView(R.id.total_quiz) TextView TotalQuizTextView ;
+
+    @BindView(R.id.status_container) LinearLayout statusContainer;
+
+    @BindView(R.id.welcome_container) LinearLayout welcome_container ;
+
+    @BindView(R.id.quizapp_start_screen) LinearLayout startbtn_container;
+
+    @BindView(R.id.final_container) LinearLayout finalContainer;
+
+    @BindView(R.id.question_1) LinearLayout quiz1Container ;
+    @BindView(R.id.question_2) LinearLayout quiz2Container ;
+    @BindView(R.id.question_3) LinearLayout quiz3Container ;
+    @BindView(R.id.question_4) LinearLayout quiz4Container ;
+    @BindView(R.id.question_5) LinearLayout quiz5Container ;
+    @BindView(R.id.question_6) LinearLayout quiz6Container ;
+    @BindView(R.id.question_7) LinearLayout quiz7Container ;
+    @BindView(R.id.question_8) LinearLayout quiz8Container ;
+    @BindView(R.id.question_9) LinearLayout quiz9Container ;
+    @BindView(R.id.question_10) LinearLayout quiz10Container ;
+    @BindView(R.id.question_11) LinearLayout quiz11Container ;
+    @BindView(R.id.question_12) LinearLayout quiz12Container ;
+    @BindView(R.id.question_13) LinearLayout quiz13Container ;
+    @BindView(R.id.question_14) LinearLayout quiz14Container ;
+    @BindView(R.id.question_15) LinearLayout quiz15Container ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        TotalQuizTextView = findViewById(R.id.total_quiz);
-        CurrentQuizTextView = findViewById(R.id.current_quiz);
-
-
-        LinearLayout statusContainer = findViewById(R.id.status_container);
+        ButterKnife.bind(this);
 
         statusContainer.setVisibility(View.GONE);
         hideAllQuizContainer();
@@ -48,18 +71,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void startQuiz(View view)
     {
-
-        LinearLayout welcome_container = findViewById(R.id.welcome_container);
         welcome_container.setVisibility(View.GONE);
 
-        LinearLayout startbtn_container = findViewById(R.id.quizapp_start_screen);
         startbtn_container.setVisibility(View.GONE);
+
         responseGiven = true;
         displayNextQuiz(view);
-        LinearLayout statusContainer = findViewById(R.id.status_container);
         statusContainer.setVisibility(View.VISIBLE);
 
-        LinearLayout finalContainer = findViewById(R.id.final_container);
         finalContainer.setVisibility(View.GONE);
     }
 
@@ -67,8 +86,6 @@ public class MainActivity extends AppCompatActivity {
      *  This method display the next quiz
      */
     void displayNextQuiz(View view){
-        LinearLayout quizContainer;
-
          if (!responseGiven){
             Toast.makeText(this, R.string.give_anwser_msg, Toast.LENGTH_SHORT).show();
             return;
@@ -77,74 +94,63 @@ public class MainActivity extends AppCompatActivity {
         hideAllQuizContainer();
         switch (currentQiuz){
             case 0:
-                quizContainer = findViewById(R.id.question_1);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz1Container.setVisibility(View.VISIBLE);
                 break;
 
             case 1:
-                quizContainer = findViewById(R.id.question_2);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz2Container.setVisibility(View.VISIBLE);
                 break;
 
             case 2:
-                quizContainer = findViewById(R.id.question_3);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz3Container.setVisibility(View.VISIBLE);
                 break;
 
             case 3:
-                quizContainer = findViewById(R.id.question_4);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz4Container.setVisibility(View.VISIBLE);
                 break;
 
             case 4:
-                quizContainer = findViewById(R.id.question_5);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz5Container.setVisibility(View.VISIBLE);
                 break;
+
             case 5:
-                quizContainer = findViewById(R.id.question_6);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz6Container.setVisibility(View.VISIBLE);
                 break;
 
             case 6:
-                quizContainer = findViewById(R.id.question_7);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz7Container.setVisibility(View.VISIBLE);
                 break;
+
             case 7:
-                quizContainer = findViewById(R.id.question_8);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz8Container.setVisibility(View.VISIBLE);
                 break;
 
             case 8:
-                quizContainer = findViewById(R.id.question_9);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz9Container.setVisibility(View.VISIBLE);
                 break;
+
             case 9:
-                quizContainer = findViewById(R.id.question_10);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz10Container.setVisibility(View.VISIBLE);
                 break;
 
             case 10:
-                quizContainer = findViewById(R.id.question_11);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz11Container.setVisibility(View.VISIBLE);
                 break;
+
             case 11:
-                quizContainer = findViewById(R.id.question_12);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz12Container.setVisibility(View.VISIBLE);
                 break;
 
             case 12:
-                quizContainer = findViewById(R.id.question_13);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz13Container.setVisibility(View.VISIBLE);
                 break;
 
             case 13:
-                quizContainer = findViewById(R.id.question_14);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz14Container.setVisibility(View.VISIBLE);
                 break;
 
             case 14:
-                quizContainer = findViewById(R.id.question_15);
-                quizContainer.setVisibility(View.VISIBLE);
+                quiz15Container.setVisibility(View.VISIBLE);
                 break;
             default:
                 break;
@@ -162,23 +168,6 @@ public class MainActivity extends AppCompatActivity {
      * */
     private void hideAllQuizContainer()
     {
-        LinearLayout quiz1Container = findViewById(R.id.question_1);
-        LinearLayout quiz2Container = findViewById(R.id.question_2);
-        LinearLayout quiz3Container = findViewById(R.id.question_3);
-        LinearLayout quiz4Container = findViewById(R.id.question_4);
-        LinearLayout quiz5Container = findViewById(R.id.question_5);
-        LinearLayout quiz6Container = findViewById(R.id.question_6);
-        LinearLayout quiz7Container = findViewById(R.id.question_7);
-        LinearLayout quiz8Container = findViewById(R.id.question_8);
-        LinearLayout quiz9Container = findViewById(R.id.question_9);
-        LinearLayout quiz10Container = findViewById(R.id.question_10);
-        LinearLayout quiz11Container = findViewById(R.id.question_11);
-        LinearLayout quiz12Container = findViewById(R.id.question_12);
-        LinearLayout quiz13Container = findViewById(R.id.question_13);
-        LinearLayout quiz14Container = findViewById(R.id.question_14);
-        LinearLayout quiz15Container = findViewById(R.id.question_15);
-
-
         quiz1Container.setVisibility(View.GONE);
         quiz2Container.setVisibility(View.GONE);
         quiz3Container.setVisibility(View.GONE);
@@ -201,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
      */
     void hideCounterContainer()
     {
-        LinearLayout statusContainer = findViewById(R.id.status_container);
         statusContainer.setVisibility(View.GONE);
     }
 
