@@ -6,20 +6,20 @@ This project is part of the training projects of udacity nanodegree
 
 Below are some screenshot of the look of the application on device.
 
-Start screen
+# Start screen
 
 <img src="quizappscreenshots/startscreen.png" width="400" >
 
 
-Quiz 3 screen
+# Quiz 3 screen
 <img src="quizappscreenshots/quiz3screen.png" width="400" >
 
 
-Quiz 4 screen
+# Quiz 4 screen
 <img src="quizappscreenshots/quiz15screen.png" width="400" >
 
 
-Result screen
+# Result screen
 <img src="quizappscreenshots/resultscreen.png" width="400" >
 
 
