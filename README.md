@@ -4,15 +4,23 @@ This app makes an inquiry into the progress of your child in college. It lets yo
 
 This project is part of the training projects of udacity nanodegree
 
-Below is the look of the application on device.
+Below are some screenshot of the look of the application on device.
+
+Start screen
 
 <img src="quizappscreenshots/startscreen.png" width="400" >
 
+
+Quiz 3 screen
 <img src="quizappscreenshots/quiz3screen.png" width="400" >
 
+
+Quiz 4 screen
 <img src="quizappscreenshots/quiz15screen.png" width="400" >
 
-<img src="quizappscreenshots/resultscreen.png.png" width="400" >
+
+Result screen
+<img src="quizappscreenshots/resultscreen.png" width="400" >
 
 
 Pre-requisites
