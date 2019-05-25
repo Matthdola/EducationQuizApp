@@ -219,33 +219,14 @@ public class MainActivity extends AppCompatActivity {
         responseGiven = true;
         if (view.getId() == R.id.quest_1_a){
             score++;
-
-        } else if (view.getId() == R.id.quest_1_b){
-            score += 0.2;
-
-        }else if (view.getId() == R.id.quest_1_c){
-            score += 0.5;
-
-        }else if (view.getId() == R.id.quest_1_d){
-            score += 0;
         }
     }
 
     public void quest2Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_2_a){
-            score += 1;
-
-        } else if (view.getId() == R.id.quest_2_b){
-            score += 0;
-
-        } else if (view.getId() == R.id.quest_2_c){
-            score += 0.25;
-
-        } else if (view.getId() == R.id.quest_2_d){
-            score += 0;
-
+        if (view.getId() == R.id.quest_2_a) {
+            score++;
         }
     }
 
@@ -253,16 +234,10 @@ public class MainActivity extends AppCompatActivity {
     {
         responseGiven = true;
         if (view.getId() == R.id.quest_3_a){
-            score += 1;
+            score++;
 
         } else if (view.getId() == R.id.quest_3_b){
             score += 0.5;
-
-        } else if (view.getId() == R.id.quest_3_c){
-            score += 0.2;
-
-        } else if (view.getId() == R.id.quest_3_d){
-            score += 0;
         }
 
     }
@@ -271,16 +246,7 @@ public class MainActivity extends AppCompatActivity {
     public void quest4Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_4_a){
-            score += 0.5;
-
-        } else if (view.getId() == R.id.quest_4_b){
-            score += 0;
-
-        } else if (view.getId() == R.id.quest_4_c){
-            score += 0.2;
-
-        } else if (view.getId() == R.id.quest_4_d){
+        if (view.getId() == R.id.quest_4_d){
             score += 1;
         }
     }
@@ -291,19 +257,8 @@ public class MainActivity extends AppCompatActivity {
         responseGiven = true;
         if (view.getId() == R.id.quest_5_a){
             score += 0.25;
-
-        } else if (view.getId() == R.id.quest_5_b){
-            score += 0.2;
-
-        }else if (view.getId() == R.id.quest_5_c){
-            score += 0;
-
-        }else if (view.getId() == R.id.quest_5_d){
-            score += 0;
-
         }else if (view.getId() == R.id.quest_5_e){
-            score += 1;
-
+            score++;
         }
     }
 
@@ -314,14 +269,8 @@ public class MainActivity extends AppCompatActivity {
         if (view.getId() == R.id.quest_6_a){
             score += 0.5;
 
-        } else if (view.getId() == R.id.quest_6_b){
-            score += 0.75;
-
-        }else if (view.getId() == R.id.quest_6_c){
-            score += 1;
-
         }else if (view.getId() == R.id.quest_6_d){
-            score += 0.25;
+            score++;
 
         }
     }
@@ -330,18 +279,10 @@ public class MainActivity extends AppCompatActivity {
     public void quest7Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_7_a){
-            score += 0.5;
-
-        } else if (view.getId() == R.id.quest_7_b){
+        if (view.getId() == R.id.quest_7_b){
             score += 0.25;
-
         }else if (view.getId() == R.id.quest_7_c){
-            score += 1;
-
-        }else if (view.getId() == R.id.quest_7_d){
-            score += 0;
-
+            score++;
         }
 
     }
@@ -350,18 +291,8 @@ public class MainActivity extends AppCompatActivity {
     public void quest8Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_8_a){
-            score += 0;
-
-        } else if (view.getId() == R.id.quest_8_b){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.quest_8_c){
-            score += 0.75;
-
-        }else if (view.getId() == R.id.quest_8_d){
-            score += 1;
-
+        if (view.getId() == R.id.quest_8_d){
+            score++;
         }
 
     }
@@ -389,17 +320,10 @@ public class MainActivity extends AppCompatActivity {
     public void quest10Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_10_a){
-            score += 0.25;
-
-        } else if (view.getId() == R.id.quest_10_b){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.quest_10_c){
+        if (view.getId() == R.id.quest_10_c){
             score += 1;
-
         }else if (view.getId() == R.id.quest_10_d){
-            score += 0.75;
+            score += 0.5;
 
         }
     }
@@ -408,17 +332,8 @@ public class MainActivity extends AppCompatActivity {
     public void quest11Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_11_a){
-            score += 0;
-
-        } else if (view.getId() == R.id.quest_11_b){
-            score += 0.5;
-
-        }else if (view.getId() == R.id.quest_11_c){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.quest_11_d){
-            score += 0.25;
+        if (view.getId() == R.id.quest_11_d){
+            score += 1;
 
         }
 
@@ -428,21 +343,14 @@ public class MainActivity extends AppCompatActivity {
     public void quest12Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_12_a){
-            score += 0.25;
-
-        } else if (view.getId() == R.id.quest_12_b){
+        if (view.getId() == R.id.quest_12_b){
             score += 0.5;
 
         }else if (view.getId() == R.id.quest_12_c){
-            score += 0.5;
-
-        }else if (view.getId() == R.id.quest_12_d){
-            score += 0;
+            score += 0.25;
 
         }else if (view.getId() == R.id.quest_12_e){
             score += 0.25;
-
         }
 
     }
@@ -455,12 +363,6 @@ public class MainActivity extends AppCompatActivity {
             score += 0.5;
 
         } else if (view.getId() == R.id.quest_13_b){
-            score += 1;
-
-        }else if (view.getId() == R.id.quest_13_c){
-            score += 0.75;
-
-        }else if (view.getId() == R.id.quest_13_d){
             score += 0.5;
 
         }
@@ -470,18 +372,8 @@ public class MainActivity extends AppCompatActivity {
     public void quest14Answer(View view)
     {
         responseGiven = true;
-        if (view.getId() == R.id.quest_14_a){
-            score += 0.75;
-
-        } else if (view.getId() == R.id.quest_14_b){
-            score += 1;
-
-        }else if (view.getId() == R.id.quest_14_c){
-            score += 0.25;
-
-        }else if (view.getId() == R.id.quest_14_d){
-            score += 0;
-
+        if (view.getId() == R.id.quest_14_b){
+            score++;
         }
     }
 
